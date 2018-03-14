@@ -1,0 +1,85 @@
+<!doctype html>
+{% load static %}
+
+<div class="contentBox">
+  {% if Post %}
+  {% for Posts in Post %}
+  <div class="contentBox">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="avatarPost">
+          <img class="img-responsive" src="http://matchmaker.nsri.co.uk/images/researchers/University%20of%20Glasgow.jpg" class="img-responsive" alt="Responsive image"></img>
+        </div>
+      </div>
+      <div class="col-sm-10">
+        <div class="usernameText">{{ Post.user }}</div> Posted About {{ Post.module }}
+        <br> School * Subject * Name
+        <br>
+        <div class="datetimeText">{{ Post.created }}</div>
+      </div>
+
+    </div>
+    <div class="customDivder"></div>
+    {% if not Post.image %}
+    {{ Post.content }} <br>
+    {% else %}
+    <div class="row">
+      <div class="col-sm-9">
+        {{ Post.content}} <br>
+        <p>&nbsp;</p>
+      </div>
+      <div class="col-sm-3">
+        <div class="postImage">
+          <img class="img-responsive" src="{{ content.image }}">
+        </div>
+        Image
+      </div>
+    </div>
+    {% endif %}
+    <div class="customDivder"></div>
+    <div class="row">
+      <center>
+        <div class="col-sm-4">Like <a href="#" data-toggle="tooltip" data-placement="bottom" title="User1<br>User2"><span class="badge badge-secondary">{{ Post.likes }}</span></a></div>
+        <div class="col-sm-4">
+          <div class="btn-col" button data-toggle="collapse" data-target="#comments">Comment <span class="badge badge-secondary">4</span></div>
+        </div>
+        <div class="col-sm-4">Share <span class="badge badge-secondary">4</span></div>
+      </center>
+    </div>
+
+    <div class="commentContainer">
+      <div id="comments" class="collapse">
+        {% for Comments in Comment %}
+        <div class="commentContainer" id="commentComment">
+          <div class="usernameText">{{ Comment.user }}</div> Posted at :
+          <div class="datetimeText">{{ Comment.created }}</div>
+          <div class="customDivder"></div>
+          <p>{{ Comment.content }}
+            <p>&nbsp;</p>
+        </div>
+        <div class="customDivder"></div>
+        {% endfor %}
+
+        <div class="row">
+          <div class="col-sm-10">
+            <div class="form-group">
+              <label for="comment">Comment:</label>
+              <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary commentButton">Post Comment</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% else %}
+  This user has no posts...
+  {% endif %}
+</div>

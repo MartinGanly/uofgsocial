@@ -6,6 +6,11 @@ from django.contrib import admin
 from social.models import College, Subject, Module, UserProfile, Follow, Post, Comment, Notification
 
 
+
+class CategoryAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug':('name',)}
+
+    
 # Register your models here.
 admin.site.register(College)
 admin.site.register(Subject)
