@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 
 from django.shortcuts import render
 from social.forms import RegistrationForm, UserProfileForm
-
+from django.contrib.auth import authenticate, login
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
@@ -34,13 +34,9 @@ def login(request):
 
     if request.method == 'POST':
 
-<<<<<<< HEAD
+
         username = request.POST.get('exampleInputEmail1')
         password = request.POST.get('exampleInputPassword1')
-=======
-        username = request.POST.get('username')
-        password = request.POST.get('password')
->>>>>>> ab626bd1cc70281e85e97cb1f1357fa8d162371e
 
         user = authenticate(username=username, password=password)
 

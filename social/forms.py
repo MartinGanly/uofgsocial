@@ -3,7 +3,12 @@ from django.contrib.auth.models import User
 from social.models import UserProfile
 
 
+class UserForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
 
+    class Meta:
+        model = User
+        fields = ('exampleInputEmail1', 'exampleInputPassword1')
 
 
 class UserProfileForm(forms.ModelForm):
