@@ -3,10 +3,11 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from social.models import College, Subject, Module, UserProfile, Follow, Post, Comment, Notification
+from social.models import University, College, Subject, Module, UserProfile, Follow, Post, Comment, Notification
 
 
 # Register your models here.
+admin.site.register(University)
 admin.site.register(College)
 admin.site.register(Subject)
 admin.site.register(Module)

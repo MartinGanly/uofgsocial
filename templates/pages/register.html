@@ -1,6 +1,14 @@
 <!doctype html>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 {% extends 'pages/base.html' %}
-{% load static %}
+{% load staticfiles %}
+=======
+=======
+>>>>>>> Stashed changes
+{% load staticfiles %}
+<html lang="en">
+>>>>>>> Stashed changes
 
 {% block body_block %}
 
@@ -8,7 +16,7 @@
         <!-- main content area -->
         <div class="contentBox">
           <!-- Registration form -->
-          <form>
+          <form method="post" action="{% url 'register' %}" enctype="multipart/form-data">
             <div class="col-sm-4">
               <div class="mainContentBox" id="centered">
                 <div class="form-group">
@@ -142,6 +150,7 @@
                                 <option value="3">Three</option>
                               </select>
                 <button type="submit" class="btn-lg btn-primary">Delete Subject</button>
+       <!-- Register button here -->
                 <br><br><br><button type="submit" class="btn-lg btn-primary">Register</button>
           </form>
           <!-- end registration form -->
@@ -161,5 +170,16 @@
     </div>
 
   </div>
-  </div>
+<<<<<<< Updated upstream
+</div>
 {% endblock %}
+=======
+  </div>
+
+</body>
+<<<<<<< Updated upstream
+</html>
+>>>>>>> Stashed changes
+=======
+</html>
+>>>>>>> Stashed changes

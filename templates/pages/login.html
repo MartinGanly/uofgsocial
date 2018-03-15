@@ -1,6 +1,14 @@
-<!doctype html>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 {% extends 'pages/base.html' %}
 {% load static %}
+=======
+=======
+>>>>>>> Stashed changes
+<!doctype html>
+{% load staticfiles %}
+<html lang="en">
+>>>>>>> Stashed changes
 
 {% block body_block %}
 
@@ -8,7 +16,8 @@
       <div class="mainContentBox">
         <div class="contentBox">
           <div class="loginContainer">
-            <form>
+            <form method="post" action=".">
+              {% csrf_token %}
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
