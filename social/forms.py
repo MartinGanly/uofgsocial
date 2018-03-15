@@ -5,12 +5,6 @@ from social.models import UserProfile
 
 
 
-class UserForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput())
-
-    class Meta:
-        model = User
-        fields = ('username', 'email', 'password')
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
@@ -24,12 +18,12 @@ class RegistrationForm(forms.Form):
     required_css_class = 'required'
     
    
-    username = forms.EmailField(label=_("exampleInputEmail1"))
+    username = forms.EmailField(label=("exampleInputEmail1"))
     password1 = forms.CharField(widget=forms.PasswordInput,
-                                label=_("exampleInputPassword1"))
+                                label=("exampleInputPassword1"))
     password2 = forms.CharField(widget=forms.PasswordInput,
-                                label=_("exampleInputPassword2"))
-    username2 = forms.EmailField(label=_("exampleInputEmail2"))
+                                label=("exampleInputPassword2"))
+    username2 = forms.EmailField(label=("exampleInputEmail2"))
     
     def clean_username(self):
         """

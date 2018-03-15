@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.http import HttpResponseRedirect, HttpResponse
 
 from django.shortcuts import render
-from social.forms import UserForm, UserProfileForm
+from social.forms import RegistrationForm, UserProfileForm
 
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
@@ -63,13 +63,13 @@ def register(request):
 
     if request.method == 'POST':
 
-        user_form = UserForm(data=request.POST)
+        user_form = RegistrationForm(data=request.POST)
         profile_form = UserProfileForm(data=request.POST)
 
         if user_form.is_valid() and profile_form.is_valid():
 
             user = user_form.save()
-            user.set_password(user.password)
+            user.set_password(user.password1)
             user.save()
             profile = profile_form.save(commit=False)
             profile.user = user
@@ -85,7 +85,7 @@ def register(request):
             print(user_form.errors, profile_form.errors)
     else:
 
-        user_form = UserForm()
+        user_form = RegistrationForm()
         profile_form = UserProfileForm()
 
     return render(request,'pages/register.html', {'user_form': user_form, 'profile_form': profile_form, 'registered': registered})
