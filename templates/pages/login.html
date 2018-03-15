@@ -1,14 +1,8 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 {% extends 'pages/base.html' %}
 {% load static %}
-=======
-=======
->>>>>>> Stashed changes
 <!doctype html>
 {% load staticfiles %}
 <html lang="en">
->>>>>>> Stashed changes
 
 {% block body_block %}
 
@@ -16,8 +10,8 @@
       <div class="mainContentBox">
         <div class="contentBox">
           <div class="loginContainer">
-            <form method="post" action=".">
-              {% csrf_token %}
+            <form id="login_form" method="post" action="{% url 'login' %}">
+		{% csrf_token %}
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -28,10 +22,11 @@
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               </div>
               I've forgotten my password!
-            </form>
+
 
             <button type="submit" class="btn-lg btn-primary">Register</button>
             <button type="submit" class="btn-lg btn-primary">Login</button>
+	  </form>
           </div>
         </div>
       </div>

@@ -60,7 +60,7 @@ class UserProfile(models.Model):
 class Follow(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	module = models.ForeignKey(Module, on_delete=models.CASCADE)
-	
+
 	class Meta:
                 verbose_name_plural = 'Followers'
 
