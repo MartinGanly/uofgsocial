@@ -6,10 +6,9 @@ from social.models import UserProfile
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
 
-    class Meta:
+   class Meta:
         model = User
-        fields = ('exampleInputEmail1', 'exampleInputPassword1')
-
+        fields = ('username','password')
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
