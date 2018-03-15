@@ -1,0 +1,264 @@
+/* Main Divs */
+
+.Background {
+  width: 100%;
+  height:100%;
+  background-color: green;
+}
+
+  .siteContainer {
+    width: 100%;
+    height: 100%;
+    background-color:#f2f2f2;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* Header */
+
+/* Splash Image Div */
+
+  .splashImage {
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .splashImage img {
+    position: relative;
+    top: -50%;
+  }
+
+/* Logo Div */
+
+  .logoImage {
+    /*width: 14%;
+    height: 25%;*/
+    width: 260px;
+    height: 240px;
+    position:absolute;
+    overflow: hidden;
+    top: 900px;
+  }
+
+  #logoNoSidenav {
+    top : 300px;
+  }
+
+    @media screen and (max-width: 1200px) {
+      .logoImage {
+        width: 20%;
+        top: 0px;
+      }
+    }
+
+/* Page Title */
+
+  .pageTitle {
+    width: 100%;
+    height: 95px;
+    background-color: #ffffff;
+    padding-left: 280px;
+    float: right;
+    position:relative;
+    bottom: 95px;
+  }
+
+  .mainButton {
+    /*width: 100%;*/
+    height: 63px;
+    background-color: #383b7e;
+    color: white;
+    float: right;
+    margin-top: -70px;
+    /*margin-right: 15px;*/
+
+    position: absolute;
+    left: 35px;
+    right: 22px;
+
+  }
+
+  .mainButton a {
+    color: white;
+    font-size: 42px;
+  }
+
+  .mainButton a:hover, .mainButton a:active {
+    color: white;
+  }
+
+
+/* Content Box */
+
+  .mainContentBox {
+    width: 100%;
+    height: 80%;
+    background-color: white ;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+  }
+  #centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    .mainContentBox {
+      background-color: white;
+    }
+  }
+
+  .contentBox {
+    width: 95%;
+    height: 100%;
+    background-color: #f2f2f2;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    overflow: hidden;
+    font-size: 1.5em;
+  }
+
+  #isImage {
+    background-color: transparent;
+  }
+
+/* Footer */
+
+/* loginContainer */
+
+.loginContainer {
+  max-width: 400px;
+  max-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Side NavBar */
+.sideNavbar {
+  height: 100%;
+  width: 90%;
+  background-color: #f2f2f2;
+}
+
+/* force sidebar glyphicon smaller */
+.glyphicon.glyphicon-play {
+    font-size: 10px;
+}
+
+.list-group.list-group-root {
+  padding: 0;
+  overflow: hidden;
+}
+
+.list-group.list-group-root .list-group {
+  margin-bottom: 0;
+}
+
+.list-group.list-group-root .list-group-item {
+  border-radius: 0;
+  border-width: 1px 0 0 0;
+  background-color: #f2f2f2;
+  padding: 5px;
+}
+
+.list-group.list-group-root > .list-group-item:first-child {
+  border-top-width: 0;
+}
+
+.list-group.list-group-root > .list-group > .list-group-item {
+  padding-left: 25px;
+}
+
+.list-group.list-group-root > .list-group > .list-group > .list-group-item {
+  padding-left: 35px;
+}
+
+.customDivder {
+  background-color: #5facd8;
+  width: 60%;
+  height:2px;
+  opacity: 0.2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#leftDivider {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.avatarPost {
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+/*Overwrites default bootstrap css*/
+.breadcrumb {
+  background-color: transparent;
+  color: black;
+  margin-top: -15px;
+  margin-left: -10px;
+}
+
+.breadcrumb >.active a {
+   color: black;
+   background-color: transparent;
+   color: black;
+   margin-top: -15px;
+}
+
+.commentButton {
+  width: 150px;
+  max-width: 150px;
+  margin-top: 20px;
+}
+
+.datetimeText {
+  font-size: 0.8em;
+  color: #383b7e;
+  display: inline;
+}
+
+.usernameText {
+  font-size: 1.4em;
+  display: inline;
+  font-weight: bold;
+}
+
+.postImage {
+  max-width: 250px;
+  max-height: 250px;
+  margin-right: 45px;
+  overflow: hidden;
+}
+
+.commentContainer {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+#commentComment {
+  background-color: #f2f2f2;
+}
+
+.navbar {
+  margin-bottom: 0 !important;
+}

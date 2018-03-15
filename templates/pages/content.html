@@ -1,0 +1,22 @@
+<!doctype html>
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block body_block %}
+      <div class="row">
+        <!-- left hand container of page - contains LOGO and sidebar -->
+        <div class="col-sm-2">
+          {% include 'components/sidebar.html' %}
+        </div>
+        <!-- end left hand container of page - contains LOGO and sidebar -->
+        <!-- right hand container of page - contains content -->
+        <div class="col-sm-10">
+          {% include 'components/posts.html' %}
+        </div>
+        <!-- End content -->
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

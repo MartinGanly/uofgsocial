@@ -1,0 +1,41 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MicroBlog</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/standard.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Static navbar -->
+      {% block navbar %}{% include 'components/navbar.html' %}{% endblock %}
+  <!-- end static navbar -->
+
+  <div class="background">
+    <div class="siteContainer">
+  <!-- page header (splash image, page title & breadcrumb and logo image -->
+      {% block header %}{% include 'components/header.html' %}{% endblock %}
+      <!-- end page header -->
+
+      <!-- main page button (different for homepage than any other) -->
+      {% block mainbutton %}{% include 'components/mainbutton.html' %}{% endblock %}
+      <!-- main page button end -->
+
+      <!-- main content area -->
+      {%block body_block %}
+      {% endblock %}
+      <!-- main content area -->
+
+    </div>
+  </div>
+
+</body>

@@ -1,0 +1,41 @@
+<!doctype html>
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip({
+        html: true
+      });
+    });
+</script>
+
+      <div class="row">
+      <!-- left hand side content area - contains page logo + basic details -->
+        <div class="col-sm-2">
+          {% block basicdetails %}{% include 'components/basicdetails.html' %}{% endblock %}
+        </div>
+        <!-- end left hand side content area -->
+
+        <!-- Right hand side content area -->
+        <div class="col-sm-10">
+
+          {% block bio %}{% include 'components/bio.html' %}{% endblock %}
+        </div>
+        <!-- end right hand side content area -->
+      </div>
+
+      <!-- full width content area -->
+      <div class="mainContentBox">
+        {% block subjectlist %}{% include 'components/subjectlist.html' %}{% endblock %}
+        <br>
+        {% block topposts %}{% include 'components/topposts.html' %}{% endblock %}
+      </div>
+      <!-- end full width content area -->
+    </div>
+
+
+  </div>
+  </div>
+{% endblock %}
