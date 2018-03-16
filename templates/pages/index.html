@@ -1,15 +1,6 @@
 <!doctype html>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 {% extends 'pages/base.html' %}
 {% load static %}
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-{% load staticfiles %}
 <html lang="en">
 
 <head>
@@ -25,30 +16,6 @@
 </head>
 
 <body>
-
-  <!-- Static navbar -->
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="../navbar-static-top/">Register</a></li>
-          <li><a href="../navbar-fixed-top/">Login</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- end static navbar -->
 
   <!-- page header (splash image, page title & breadcrumb and logo image -- >
   <div class="background">
@@ -74,7 +41,6 @@
       </div>
       <!-- main page button end -->
 
->>>>>>> Stashed changes
       <!-- main content area -->
       {% block body_block %}
       <div class="mainContentBox">
@@ -95,9 +61,9 @@
           <div class="col-sm-6">
             <div class="contentBox">
               Universities we currently accept :<br><br>
-              {% if Universities %}
+              {% if University_list %}
               <ul>
-              {% for Universities in University %}
+              {% for University in University_list %}
               <li>{{ University.name }}</li>
               {% endfor %}
               </ul>

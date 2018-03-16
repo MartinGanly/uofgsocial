@@ -4,7 +4,8 @@
 <div class="mainContentBox">
   <h2> Title......</h2>
   <hr>
-  {% for Posts in Post %}
+  {% if Post_list %}
+  {% for Post in Post_list %}
     <div class="row">
       <div class="contentBox">
       <div class="col-sm-2">
@@ -80,6 +81,9 @@
     </div>
   </div>
   {% endfor %}
+  {% else %}
+  There are currently no posts to show...
+  {% endif %}
 
   <div class="contentBox">
     <div class="row">

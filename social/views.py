@@ -18,19 +18,19 @@ from django.contrib.auth import logout
 
 # Create your views here.
 def index(request):
-    university_list = University.objects
+    university_list = University.objects.all()
     context_dict = { 'PageTitle' : 'UofGSocial',
-                    'Universities' : university_list}
+                    'University_list' : university_list}
     response = render(request, 'pages/index.html', context_dict)
     return response
 
 def content(request):
-    post_list = Post.objects
+    post_list = Post.objects.all()
     comment_list = Comment.objects
     user_list = UserProfile.objects
     context_dict = { 'PageTitle' : 'Recent Posts',
                     'Users' : user_list,
-                    'Posts' : post_list,
+                    'Post_list' : post_list,
                     'Comments' : comment_list}
     reponse = render(request, 'pages/content.html', context_dict)
     return reponse
@@ -46,7 +46,7 @@ def editprofile(request):
     reponse = render(request, 'pages/editprofile.html', context_dict)
     return reponse
 
-def viewprofile(request):
+def viewprofile(request, user):
     # request.GET.get('varname','') default = ''
     post_list = Post.objects
     comment_list = Comment.objects
