@@ -46,7 +46,7 @@ def editprofile(request):
     reponse = render(request, 'pages/editprofile.html', context_dict)
     return reponse
 
-def viewprofile(request, user):
+def viewprofile(request):
     # request.GET.get('varname','') default = ''
     post_list = Post.objects
     comment_list = Comment.objects
