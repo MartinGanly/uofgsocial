@@ -1,15 +1,6 @@
 <!doctype html>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 {% extends 'pages/base.html' %}
 {% load static %}
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-{% load staticfiles %}
 <html lang="en">
 
 <head>
@@ -87,6 +78,24 @@
         <!-- end left hand container of page - contains LOGO and sidebar -->
         <!-- right hand container of page - contains content -->
         <div class="col-sm-10">
+            <div id="newPost" class="collapse">
+              <div class="commentContainer">
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="form-group">
+                    <label for="comment">Your Post :</label>
+                    <textarea class="form-control" rows="5" id="post"></textarea>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <br>
+                  <button type="button" class="btn btn-primary commentButton">Add Image</button>
+                  <br>
+                  <button type="button" class="btn btn-primary commentButton">Post Comment</button>
+                </div>
+              </div>
+            </div>
+          </div>
           {% include 'components/posts.html' %}
         </div>
         <!-- End content -->

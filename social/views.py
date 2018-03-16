@@ -79,8 +79,8 @@ def login(request):
             return HttpReponse("Invalid login details supplied.")
 
     else:
-
-        return render(request, 'pages/login.html', {})
+        render = (request, 'pages/login.html', context_dict)
+        return render
 
 
 def register(request):

@@ -18,7 +18,7 @@
       <ul class="nav navbar-nav navbar-right">
         {% if user.is_authenticated %}
         <li><a href="{% url 'content' %}/GET={{ request.user.id }}">Profile</a></li>
-        <li><a href="{% url 'login' %}">Logout</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
         {% else %}
         <li><a href="{% url 'register' %}">Register</a></li>
         <li><a href="{% url 'login' %}">Login</a></li>

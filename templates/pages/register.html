@@ -13,38 +13,47 @@
             <div class="col-sm-4">
               <div class="mainContentBox" id="centered">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address*</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <label for="email">Email address*</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password*</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <label for="email2">Email address Confirm*</label>
+                  <input type="email2" class="form-control" id="email2" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword2">Confirm Password*</label>
-                  <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                  <label for="password">Password*</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password">
                 </div>
                 <div class="form-group">
-                  <label for="exampleDate">Date Of Birth*</label>
-                  <input type="number" class="form-control" id="exampleDate" placeholder="Enter DOB">
+                  <label for="confPassword">Confirm Password*</label>
+                  <input type="password" class="form-control" id="confPassword" placeholder="Password">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail2">Secondary Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter secondary email">
+                  <label for="DOBinput">Date Of Birth*</label>
+                  <div class='input-group date' id='datetimepicker'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+                  </div>
                 </div>
                 <div class="form-group">
-                  <label for="exampleNumber">Phone Number</label>
-                  <input type="number" class="form-control" id="exampleNumber" placeholder="Enter Phone Number">
+                  <label for="SecondayEmail">Secondary Email</label>
+                  <input type="email" class="form-control" id="SecondaryEmail" aria-describedby="Non Student Email" placeholder="{{ User.email2 }}">
                 </div>
                 <div class="form-group">
-                  <label for="examplelocation">Location</label>
-                  <input type="text" class="form-control" id="examplelocation" placeholder="Enter Location">
+                  <label for="PhoneNo">Phone Number</label>
+                  <input type="number" class="form-control" id="Phone Number" aria-describedby="Phone Number" placeholder="{{ User.phoneNo }}">
+                  </div>
+                <div class="form-group">
+                  <label for="Location">Location</label>
+                  <input type="text" class="form-control" id="Location" aria-describedby="Location" placeholder="{{ User.location }}">
                 </div>
                 <div class="form-group">
-                  <label for="examplelanguage">Languages</label>
-                  <input type="text" class="form-control" id="examplelanguage" placeholder="Enter Languages">
-                </div>
+                  <label for="Languages">Languages</label>
+                  <input type="text" class="form-control" id="Languages" aria-describedby="Languages" placeholder="{{ User.languages }}">
+                  </div>
               </div>
             </div>
 
